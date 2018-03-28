@@ -1,0 +1,2111 @@
+/*            Default styles file           */
+
+html, body {
+	margin: 0;
+	height: 100%;
+	background-color: #121212;
+}
+
+@font-face {
+	font-family: Lato;
+	src: url('../fonts/lato-webfont.woff')
+}
+
+@font-face {
+	font-family: Orbitron;
+	src: url('../fonts/orbitron-webfont.woff')
+}
+
+/***********  Page architecture  ***********/
+
+.page-container {
+	display: grid;
+	grid-template: auto 1fr auto / 1fr;
+	width: 100%;
+	min-height: 100%;
+}
+
+.content__index-carousel-container {
+	width: 100%;
+	max-height: 100%;
+}
+
+/*****  Header common styles  *****/
+
+.header {
+	color: #98968E;
+	font-family: 'Lato', sans-serif;
+}
+
+.header i, .header__contacts-panel a {
+	margin: 0 7px 0 7px;
+}
+
+.phone-number {
+	color: #B11924;
+}
+
+/**********************  Header  **********************/
+
+.header-container {
+	grid-area: 1 / 1 / 2 / 2;
+	display: grid;
+	grid-template: 84px / 1fr 1140px 1fr; 
+	background-color: #111111;
+	width: 100%;
+	z-index: 2;
+}
+
+.header {
+	grid-area: 1 / 2 / 2 / 3;
+	display: grid;
+	grid-template: 32px 52px / 250px auto 1fr;
+}
+
+.header__logo {
+	grid-area: 1 / 1 / 3 / 2;
+	height: 100%;
+}
+
+.header__logo-link {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	height: 100%;
+}
+
+.header__logo-link > img {
+	display: block;
+	width: 233px;
+	height: 54px;
+	align-self: center;
+}
+
+.header__contacts-panel {
+	grid-area: 1 / 2 / 2 / 4;
+	justify-self: end;
+	align-self: center;
+	display: grid;
+	grid-template: 100% / repeat(3, auto);
+	justify-content: space-around;
+	grid-gap: 15px;
+	background-color: #262626;
+	border-radius: 0px 0px 15px 15px;
+	align-self: stretch;
+	align-content: center;
+	line-height: 32px;
+}
+
+.lifetime {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.phone-number {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.contact-link {
+	grid-area: 1 / 3 / 2 / 4;
+}
+
+.contact-link:hover {
+	color: #fff;
+}
+
+/******  Buttons, Right to the Menu  ******/
+
+.header__buttons-container {
+	grid-area: 2 / 3 / 3 / 4;
+	display: grid;
+	grid-template: 1fr / 97px 83px 52px;
+	align-content: center;
+	line-height: 52px;
+	position: relative;
+}
+
+.header__search-flex-container:hover, .header__sign-in-flex-container:hover, .header__cart-flex-container:hover {
+	background-color: #090909;
+}
+
+.header__sign-in-flex-container {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.header__sign-in {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__cart-flex-container {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.header__cart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__cart > i {
+	color: #B11924;
+}
+
+.header__search-flex-container {
+	grid-area: 1 / 3 / 2 / 4;
+}
+
+.header__search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 52px;
+}
+
+.search-form {
+	position: absolute;
+	display: none;
+	width: 270px;
+	height: 33px;
+	left: -80px;
+	top: -2px;
+}
+
+#search {
+	height: 27px;
+	width: 270px;
+	padding: 1px 0 1px 1px;
+}
+
+/*  Header.Menu  */
+
+.header__menu {
+	grid-area: 2 / 2 / 3 / 3;
+	display: grid;
+}
+
+.header__menu-list {
+	justify-content: space-around;
+	align-content: center;
+	display: grid;
+	grid-template: 100% / repeat(8, auto);
+	list-style: none;
+	padding: 0;
+	margin: 0 15px 0 0;
+}
+
+.header__menu-list a {
+	display: block;
+	position: relative;
+}
+
+.header__menu-list .icon-cheveron-down:before {
+    position: absolute;
+    top: 20px;
+}
+
+.header__menu-list i {
+	margin: 0 15px 0 1px;
+}
+
+.header__menu-list li:first-of-type i {
+	margin: 0 7px 0 1px;
+}
+
+.header__menu-list li {
+	padding: 0 5px 0 5px;
+	line-height: 52px;
+	border-radius: 10px 10px 0 0;
+}
+
+.header__menu-list li:hover {
+	color: #fff;
+}
+
+.gearshop-sub-menu-parent .gearshop-sub-menu {
+	color: #98968E;
+}
+
+/* Gaming Sub Menu */
+
+.gaming-sub-menu-parent {
+	position: relative;
+}
+
+.gaming-sub-menu {
+	position: absolute;
+	border-radius: 15px;
+	display: grid;
+	grid-template: 105px 105px / 140px 210px;
+	left: -140px;
+	z-index: 2;
+}
+
+.gaming-sub-menu__toggle {
+	display: none;
+}
+
+.gaming-sub-menu__desktops {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.gaming-sub-menu__laptops {
+	grid-area: 2 / 1 / 3 / 2;
+}
+
+.gaming-sub-menu__image {
+	grid-area: 1 / 2 / 3 / 3;
+	position: relative;
+	background-color: #363636;
+	border-radius: 0 15px 15px 0;
+}
+
+.gaming-sub-menu__image-origin, .gaming-sub-menu__image-desktop, .gaming-sub-menu__image-laptop {
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
+	top: 30px;
+}
+
+.gaming-sub-menu__image-origin {
+	display: block;
+}
+
+.gaming-sub-menu__image-desktop {
+	display: block;
+}
+
+.gaming-sub-menu__image-laptop {
+	display: block;
+}
+
+.gaming-sub-menu a {
+	display: block;
+	height: 105px;
+	width: 140px;
+	background-color: #2A2A2A;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 105px;
+	text-align: center;
+	color: #fff;
+	border-radius: 0px 0px 0px 15px;
+}
+
+.gaming-sub-menu a:first-of-type {
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #363636;
+	height: 104px;
+	border-radius: 15px 0px 0px 0px;
+}
+
+/*  Animation  */
+
+.gaming-sub-menu__image-origin {
+	animation: sub-menu-origin infinite 6s linear;
+}
+
+.gaming-sub-menu__image-desktop {
+	animation: sub-menu-desktop infinite 6s linear;
+}
+
+.gaming-sub-menu__image-laptop {
+	animation: sub-menu-laptop infinite 6s linear;
+}
+
+/***********  Sing In Form  ***********/
+
+.box-modal {
+	position: relative;
+	width: 305px;
+	padding: 16px;
+	background: #3c3f41;
+	color: #bbb;
+	box-shadow: 0 0 0 6px rgba(153, 153, 153, .3);
+	border-radius: 6px;
+}
+
+.box-modal_close { 
+	position: absolute; 
+	right: 10px; 
+	top: 6px; 
+	font-size: 11px; 
+	line-height: 15px; 
+	color: #999; 
+	cursor: pointer; 
+}
+
+.box-modal_close:hover { 
+	color: #6897bb; 
+}
+
+.modal-form input {
+	height: 25px;
+	width: 300px;
+	background-color: #989695;
+}
+
+.modal-form input:focus {
+	outline: none;
+	border: solid 2px #98968E;
+	border-radius: 2px;
+	background-color: #fff;
+}
+
+.modal-form legend, .login, .password {
+	margin-bottom: 15px;
+	margin-top: 5px;
+	padding: 0;
+}
+
+.modal-form legend {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	color: #B11924;
+	font-size: 24px;
+}
+
+.modal-form {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+}
+
+.modal-form button {
+	width: 100px;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #98968E;
+	border: solid 2px #000000;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+}
+
+.modal-form button:active {
+	background-color: #B11924;
+	outline: none;
+}
+
+/* Gearshop Sub Menu */
+
+.gearshop-sub-menu-parent {
+	position: relative;
+}
+
+.gearshop-sub-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: none;
+	position: absolute;
+	width: 150px;
+	background-color: #363636;
+	border-radius: 0 0 10px 10px;
+	left: 0px;
+	z-index: 2;
+}
+
+.gearshop-sub-menu li {
+	padding-left: 25px;
+	height: 30px;
+}
+
+.gearshop-sub-menu li a {
+	display: block;
+	line-height: 30px;
+}
+
+li:hover > l {
+	display: block;
+}
+
+/***********************  Footer and its contents  ***********************/
+
+.footer-container {
+	grid-area: 3 / 1 / 4 / 2;
+	display: grid;
+	grid-template: auto / 1fr 1140px 1fr;
+	background-image: linear-gradient(to bottom, #181818 0%, #000000 100%);
+	color: #98968E;;
+}
+
+.footer {
+	grid-area: 1 / 2 / 2 / 3;
+	display: grid;
+	grid-template: repeat(4, auto) / repeat(6, 1fr);
+	font-family: 'Lato', sans-serif;
+}
+
+/****** Footer Menu ******/
+
+.footer__menu-container {
+	grid-area: 1 / 1 / 3 / 5;
+	align-self: stretch;
+}
+
+.footer__menu-boxes {
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.footer__menu-boxes ul {
+	list-style: none;
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+}
+
+.footer__menu-boxes li:first-child {
+	font-weight: bold;
+	color: #fff;
+	margin: 15px 0 10px 0;
+	font-family: 'Orbitron', sans-serif;
+}
+
+/******  Social links  ******/
+
+.footer__social-links-container {
+	grid-area: 1 / 5 / 2 / 7;
+	align-self: center;
+	color: #fff;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.footer__social-links {
+	display: flex;
+	justify-content: space-around;
+	color: #fff;
+	font-size: 30px;
+}
+
+/******  Newsletter Sub  ******/
+
+.footer__newsletter-container {
+	grid-area: 2 / 5 / 3 / 7;
+	font-family: 'Orbitron', sans-serif;
+	align-self: center;
+	text-align: center;
+}
+
+.newsletter-subscription {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.input-email {
+	flex: 1 1 70%;
+}
+
+.submit-email {
+	flex: 1 1 20%;
+	background-color: #FD3630;
+	border: none;
+	cursor: pointer;
+}
+
+/******  Partners  ******/
+
+.footer__powered-container {
+	grid-area: 3 / 1 / 4 / 4;
+	
+}
+
+.footer__purchased-container {
+	grid-area: 3 / 4 / 4 / 7;
+	
+}
+
+.footer__powered, .footer__purchased {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #FD3630;
+}
+
+.footer__powered img, .footer__purchased img {
+	max-width: 90%;
+}
+
+.footer__powered p, .footer__purchased p {
+	margin-bottom: 8px;
+}
+
+/* Bottom line */
+
+.footer__bottom-line-container {
+	grid-area: 4 / 1 / 5 / 7;
+	align-self: stretch;
+}
+
+.footer__bottom-line {
+	height: 40px;
+	border-top-style: solid;
+	border-width: 1px;
+	border-color: #fff;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+}
+
+/***********  To Top  ***********/
+
+#totop {
+	position: fixed;
+	width: 80px;
+	height: 80px;
+	background-color: #98968E;
+	border-radius: 40%;
+	opacity: 0.3;
+	bottom: 3%;
+	right: 2%;
+	text-align: center;
+	line-height: 85px;
+	font-size: 36px;
+	display: none;
+}
+
+#totop-link {
+	width: 80px;
+	height: 80px;
+	border-radius: 40%;
+	display: block;
+}
+
+/***********  Common styles for terms, privacy, discl, conacts, support pages  ***********/
+
+.content-container__terms-priv-disc-contact-support {
+	grid-area: 2 / 1 / 3 / 2;
+	display: grid;
+	grid-template: auto / 1fr 1140px 1fr;
+	background-color: #101010;
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+}
+
+.content__terms-priv-disc-contact-support {
+	grid-area: 1 / 2 / 2 / 3;
+	display: grid;
+	grid-template: 51px auto / 1fr;
+}
+
+.content__terms-priv-disc-contact-support__headline {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.content__terms-priv-disc-contact-support__main {
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: #1F1F1F;
+	padding-bottom: 60px;
+}
+
+.content__terms-priv-disc-contact-support__main a {
+	color: #B11924;
+}
+
+.content__terms-priv-disc-contact-support__main h1 {
+	font-size: 24px;
+	text-align: center;
+	margin: 30px 0;
+}
+
+.content__terms-priv-disc-contact-support__main h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 10px 0 0 5px;
+}
+
+.content__terms-priv-disc-contact-support__main p {
+	font-size: 14px;
+	margin: 0 5px 12px 5px;
+}
+
+.content__terms-priv-disc-contact-support__main ul {
+	font-size: 14px;
+}
+
+.content__terms-priv-disc-contact-support__headline-flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.content__terms-priv-disc-contact-support__headline-flex a {
+	margin: 12px 0;
+	font-size: 24px;
+	color: #98968E;
+	font-family: 'Orbitron', sans-serif;
+}
+
+
+/**********************  Contacts Content  **********************/
+
+.content__contact-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content__contact-headline {
+	flex: 1 1 100%;
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #363636;
+}
+
+.content__contact-headline p {
+	color: #98968E;
+	font-size: 24px;
+}
+
+.content__contact-headline h1 {
+	font-size: 40px;
+	font-weight: bold;
+	margin: 15px 0 15px 5px;
+	text-align: left;
+}
+
+.content__contact-corp-offices {
+	flex: 1 1 33.333%;
+}
+
+.content__contact-flex h3 {
+	display: block;
+	width: calc(100% - 25px);
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #363636;
+	font-family: 'Orbitron', sans-serif;
+	padding: 25px 0 15px 0;
+	margin: 0 5px;
+}
+
+.content__contact-flex h4 {
+	margin: 15px 0 8px 5px;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.content__contact-cust-service {
+	flex: 1 1 33.333%;
+}
+
+.content__contact-sales {
+	flex: 1 1 33.333%;
+}
+
+/**********************  Support Content  **********************/
+
+.content-container__support {
+	grid-area: 2 / 1 / 3 / 2;
+	display: grid;
+	grid-template: auto / 1fr 1140px 1fr;
+	background-color: #000000;
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+}
+
+.content__support__main {
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: #000000;
+	padding-bottom: 60px;
+}
+
+.content__support__main p {
+	font-size: 14px;
+	margin: 0 5px 12px 5px;
+	color: #98968E;
+}
+
+.content__support__main a {
+	color: #B11924;
+}
+
+.content__support-flex {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content__support-flex h3 {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 18px;
+	margin-left: 5px;
+}
+
+.content__support-flex h4 {
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+.content__support-flex h1 {
+	flex: 1 1 100%;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 36px;
+}
+
+.content__support-block {
+	flex: 0 0 calc(33.333% - 10px);
+	padding-right: 10px;
+}
+
+
+
+/**********************  Esports Content  **********************/
+
+.content__esports-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content__esports-headline {
+	flex: 1 1 100%;
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #363636;
+}
+
+.content__esports-headline p {
+	color: #98968E;
+	font-size: 24px;
+}
+
+.content__esports-headline h1 {
+	font-size: 40px;
+	font-weight: bold;
+	margin: 15px 0 15px 0;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.content__esports {
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.content__esports div {
+	flex: 1 1 calc(100% - 10px);
+	padding: 0 5px;
+}
+
+.content__esports h3 {
+	flex: 1 1 calc(100% - 10px);
+	padding: 0 5px;
+}
+
+.content__esports p {
+	flex: 1 1 calc(100% - 10px);
+	padding: 0 5px;
+	font-size: 16px;
+	margin: 12px 0 0 0;
+	display: block;
+}
+
+.content__esports p:last-of-type {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.content__esports img {
+	display: block;
+	margin: 0 auto;
+}
+
+.content__esports-flex h3 {
+	display: block;
+	width: calc(100% - 10px);
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #363636;
+	font-family: 'Orbitron', sans-serif;
+	padding: 25px 0 15px 0;
+	margin: 0 5px;
+	color: #FD3630;
+	font-size: 24px;
+}
+
+.content__esports-flex h4 {
+	margin: 15px 0 8px 5px;
+}
+
+.content__esports-video-flex {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.content__esports-video-player, .content__esports-video-quote {
+	flex: 1 1 calc(50% - 10px);
+	padding: 0 5px;
+}
+
+.content__esports-video-quote {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.content__esports-video-quote img {
+	flex: 1 1 40%;
+}
+
+.content__esports-video-quote p {
+	flex: 1 1 60%;
+	color: #fff;
+}
+
+.esports-quote {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 16px;
+	color: #FD3630;
+}
+
+.esports__social-links {
+	font-size: 44px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.esports__social-links a:first-of-type {
+	margin: 0 20px;
+	color: #27A2EE;
+}
+
+.esports__social-links a:last-of-type {
+	margin: 0 20px;
+	color: #63469F;
+}
+
+.content__esports div:first-of-type {
+	margin-top: 10px;
+}
+
+
+/***********  Reviews Content  ***********/
+
+.content-container__reviews {
+	grid-area: 2 / 1 / 3 / 2;
+	display: grid;
+	grid-template: auto / 1fr 1140px 1fr;
+	background-color: #000000;
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+}
+
+.content__reviews__main {
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: #000000;
+	padding-bottom: 60px;
+}
+
+.content__reviews__main p {
+	margin: 0 5px 12px 5px;
+	color: #999999;
+	flex: 1 1 100%;
+	font-size: 16px;
+	line-height: 1.42857143;
+}
+
+.content__reviews__main a {
+	color: #B11924;
+}
+
+.content__reviews-flex {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content__reviews-flex h3 {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 24px;
+	margin-left: 5px;
+	flex: 1 1 100%;
+}
+
+.content__reviews-flex h4 {
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+.content__reviews-flex h2 {
+	margin-top: 0;
+	color: #98968E;
+}
+
+.content__reviews-flex h1 {
+	flex: 1 1 100%;
+	font-family: 'Lato', sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+.content__reviews-block {
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.content__reviews-product-pic {
+	flex: 1 1 15%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.content__reviews-review {
+	flex: 1 1 85%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	order: 1;
+}
+
+.content__reviews-product-pic p {
+	text-align: center;
+	margin-top: 15px;
+	font-size: 16px;
+	color: #999999;
+}
+
+.review-nickname {
+	color: #fff;
+}
+
+.content__reviews-block:nth-of-type(even) div:nth-of-type(odd) {
+	order: 2;
+}
+
+.content__reviews-block:nth-of-type(even) h3 {
+	text-align: right;
+}
+
+/***********  Desktops Content  ***********/
+
+.content__desktops-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content__desktops-headline {
+	flex: 1 1 100%;
+}
+
+.content__desktops-headline p {
+	color: #EDEDED;
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: 3px;
+}
+
+.content__desktops-headline h1 {
+	font-size: 40px;
+	font-weight: bold;
+	margin: 15px 0 15px 5px;
+	text-align: center;
+	color: #EDEDED;
+}
+
+.content__desktops-flex h3 {
+	display: block;
+	font-family: 'Orbitron', sans-serif;
+	padding: 0;
+	margin: 50px 0 0 0;
+	text-align: center;
+	font-size: 24px;
+}
+
+.content__desktops-flex h5 {
+	color: #98968E;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 15px 0 5px 0;
+}
+
+.content__desktops-descr p {
+	color: #999999;
+	margin: 12px 20px;
+	margin-right: 25px;
+}
+
+.content__desktops-descr {
+	border-right-style: solid;
+	border-width: 1px;
+	border-color: #363636;
+}
+
+.no-border {
+	border: none;
+}
+
+.content__desktops-descr p:last-of-type {
+	color: #fff;
+}
+
+.content__desktops-flex h4 {
+	margin: 15px 0 8px 5px;
+}
+
+.content__desktops-list {
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: space-around;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.content__desktops-computer {
+	flex: 1 1 calc(25% - 1px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+}
+
+.content__desktops-computer > p {
+	text-align: center;
+	margin: 0;
+	border: none;
+	height: 36px;
+	color: #999999;
+}
+
+.content__desktops-computer h3, .content__desktops-computer h5, .content__desktops-computer .content__desktops-descr, .content__desktops-computer .content__desktops-image {
+	flex: 1 1 100%;
+}
+
+.content__desktops-price {
+	flex: 1 1 100%;
+	display: flex;
+}
+
+.content__desktops-price-item {
+	flex: 1 1 25%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.content__desktops-price-item p {
+	text-align: center;
+	color: #98968E;
+	flex: 1 1 100%;
+}
+
+.content__desktops-price-item input {
+	flex: 0 0 30%;
+	color: #111111;
+	font-family: 'Orbitron', sans-serif;
+	background-color: #FD3630;
+	border: none;
+	cursor: pointer;
+}
+
+.content__desktops-price-item input:focus {
+	outline: none;
+	background-color: #fff;
+}
+
+.desktops-price {
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.content__desktops-post-scriptum {
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+}
+
+.content__desktops-post-scriptum p {
+	flex: 0 0 80%;
+	color: #999999;
+}
+
+.content-container__desktops {
+	grid-area: 2 / 1 / 3 / 2;
+	display: grid;
+	grid-template: auto / 1fr 1140px 1fr;
+	background-color: #121212;
+	background: url('../images/desktops-bg.jpg') top left no-repeat, url('../images/desktops-bg-2.jpg') bottom right no-repeat;
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+}
+
+.content__desktops__main {
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: none;
+	padding-bottom: 60px;
+}
+
+.content__desktops-image > img {
+	display: block;
+	margin: 0 auto;
+}
+
+/***********  Laptops Contents  ***********/
+
+.content__laptops-computer {
+	flex: 1 1 calc(33.333% - 1px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+}
+
+.content__laptops-computer h3, .content__laptops-computer h5, .content__laptops-computer .content__laptops-descr, .content__laptops-computer .content__laptops-image {
+	flex: 1 1 100%;
+}
+
+.content__laptops-computer > p {
+	text-align: center;
+	margin: 0;
+	border: none;
+	color: #999999;
+	height: 36px;
+	margin-top: 15px;
+}
+
+.content__laptops-descr p {
+	color: #999999;
+	margin: 12px 20px;
+	margin-right: 25px;
+}
+
+.content__laptops-descr {
+	border-right-style: solid;
+	border-width: 1px;
+	border-color: #363636;
+}
+
+.content__laptops-toggle-inches {
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: center;
+	margin: 40px 0 20px 0;
+	font-size: 21px;
+}
+
+.content__laptops-toggle-inches-15 {
+	border-radius: 10px 0 0 10px;
+}
+
+.content__laptops-toggle-inches-17 {
+	border-radius: 0 10px 10px 0;
+}
+
+.content__laptops-toggle-button-active {
+	background-color: rgba(85, 85, 85, 0.95);
+	display: block;
+}
+
+.content__laptops-toggle-button-passive {
+	background-color: rgba(51, 51, 51, 0.75);
+	display: block;
+}
+
+.content__laptops-toggle-inches a {
+	display: block;
+	flex: 0 0 100px;
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+	line-height: 48px;
+}
+
+.content__laptops-price {
+	flex: 1 1 100%;
+	display: flex;
+}
+
+.content__laptops-price-item {
+	flex: 1 1 33.333%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.content__laptops-price-item p {
+	text-align: center;
+	color: #98968E;
+	flex: 1 1 100%;
+}
+
+.content__laptops-price-item input {
+	flex: 0 0 30%;
+	color: #111111;
+	font-family: 'Orbitron', sans-serif;
+	background-color: #FD3630;
+	border: none;
+	cursor: pointer;
+}
+
+.content__laptops-price-item input:focus {
+	outline: none;
+	background-color: #fff;
+}
+
+.laptops-price {
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.content__laptops-descr p:last-of-type {
+	color: #fff;
+}
+
+.content__laptops-image > img {
+	display: block;
+	margin: 0 auto;
+}
+
+.content__laptops-list {
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: space-around;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.content__laptops-computer-17 {
+	flex: 1 1 calc(50% - 1px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+}
+
+.content__laptops-computer-17 h3, .content__laptops-computer-17 h5, .content__laptops-computer-17 .content__laptops-descr-17, .content__laptops-computer-17 .content__laptops-image {
+	flex: 1 1 100%;
+}
+
+.content__laptops-computer-17 > p {
+	text-align: center;
+	margin: 0;
+	border: none;
+	color: #999999;
+	height: 36px;
+	margin-top: 15px;
+}
+
+.content__laptops-list-17 {
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: space-around;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.content__laptops-descr-17 p {
+	color: #999999;
+	margin: 12px 20px;
+	margin-right: 25px;
+}
+
+.content__laptops-descr-17 {
+	border-right-style: solid;
+	border-width: 1px;
+	border-color: #363636;
+	text-align: center;
+}
+
+.content__laptops-descr-17 p:last-of-type {
+	color: #fff;
+}
+
+.content__laptops-price-17 {
+	flex: 1 1 100%;
+	display: flex;
+}
+
+.content__laptops-price-item-17 {
+	flex: 1 1 50%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.content__laptops-price-item-17 p {
+	text-align: center;
+	color: #98968E;
+	flex: 1 1 100%;
+}
+
+.content__laptops-price-item-17 input {
+	flex: 0 0 20%;
+	color: #111111;
+	font-family: 'Orbitron', sans-serif;
+	background-color: #FD3630;
+	border: none;
+	cursor: pointer;
+}
+
+.content__laptops-price-item-17 input:focus {
+	outline: none;
+	background-color: #fff;
+}
+
+.laptops-price-17 {
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.content__laptops-display-none {
+	display: none;
+}
+
+.content__laptops-display-flex {
+	display: flex;
+}
+
+.trans {
+	-webkit-transition:0.8s;
+    -moz-transition:0.8s;
+    -ms-transition:0.8s;
+    -o-transition:0.8s;
+    transition:0.8s;
+}
+
+/***********  Professional Contents  ***********/
+
+.content__professional-computer {
+	flex: 1 1 calc(33.333% - 1px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+}
+
+.content__professional-computer > p {
+	text-align: center;
+	margin: 0;
+	border: none;
+	height: 36px;
+	color: #999999;
+}
+
+.content__professional-computer h3, .content__professional-computer h5, .content__professional-computer .content__desktops-descr, .content__professional-computer .content__desktops-image {
+	flex: 1 1 100%;
+}
+
+.content__professional-price {
+	flex: 1 1 100%;
+	display: flex;
+}
+
+.content__professional-price-item {
+	flex: 1 1 33.333%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.content__professional-price-item p {
+	text-align: center;
+	color: #98968E;
+	flex: 1 1 100%;
+}
+
+.content__professional-price-item input {
+	flex: 0 0 22.5%;
+	color: #111111;
+	font-family: 'Orbitron', sans-serif;
+	background-color: #FD3630;
+	border: none;
+	cursor: pointer;
+}
+
+.content__professional-price-item input:focus {
+	outline: none;
+	background-color: #fff;
+}
+
+.professional-price {
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/***********  Easy Builder Contents  ***********/
+
+.content__builder__main {
+	grid-area: 2 / 1 / 3 / 2;
+	background-color: #1F1F1F;
+	padding-bottom: 60px;
+}
+
+.content__builder__main a {
+	color: #B11924;
+}
+
+.content__builder__main h1 {
+	font-size: 24px;
+	text-align: center;
+	margin: 30px 0 15px 0;
+}
+
+.content__builder__main h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.content__builder__main p {
+	font-size: 14px;
+	margin: 0 5px 12px 5px;
+}
+
+.content__builder__main ul {
+	font-size: 14px;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-none {
+	display: none;
+}
+
+.constructor-unit {
+	cursor: pointer;
+	text-align: center;
+	flex: 0 0 calc(50% - 20px);
+	margin: 0 10px;
+}
+
+.content__builder-constructor-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.content__builder-constructor-container h3 {
+	flex: 1 1 100%;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+	color: #B11924;
+	font-size: 21px;
+}
+
+.constructor-unit-4 {
+	cursor: pointer;
+	text-align: center;
+	flex: 0 0 calc(25% - 20px);
+	margin: 0 10px;
+}
+
+.constructor-unit, .constructor-unit-4 {
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #363636;
+	border-radius: 10px;
+	height: 36px;
+	line-height: 36px;
+}
+
+.selected-unit {
+	background-color: #010101;
+}
+
+.constructor-form {
+	font-family: 'Orbitron', sans-serif;
+}
+
+.constructor-form input:last-of-type {
+	background-color: #FD3630;
+    border: none;
+    cursor: pointer;
+	width: 125px;
+}
+
+.constructor-form input:first-of-type {
+	width: 225px;
+}
+
+.constructor-form input {
+	padding: 0;
+	border: none;
+	height: 24px;
+}
+
+.form-align-tool {
+	margin: 0 auto;
+	width: 380px;
+}
+
+/***********  Cart Contents  ***********/
+
+.content__terms-priv-disc-contact-support__main > img {
+	display: block;
+	margin: 0 auto;
+}
+
+/***********  Index Content  ***********/
+
+.content-container__index {
+	grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template: minmax(auto, 450px) auto / 1fr 1140px 1fr;
+	background-color: #000000;
+}
+
+.content__index {
+	grid-area: 2 / 2 / 3 / 3;
+	display: grid;
+	grid-template: auto auto / auto;
+	background-color: #000000;
+}
+
+.content__index-products-links-cont {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.content__index-awards-cont {
+	grid-area: 2 / 1 / 3 / 2;
+	width: 100%;
+}
+
+.content__index-products-links {
+	display: flex;
+	justify-content: space-around;
+}
+
+.content__index-link-desktop, .content__index-link-laptop, .content__index-link-prof, .content__index-link-gearshop {
+	margin: 0;
+	flex: 0 0 25%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+.content__index-link-image {
+	flex: 1 1 100%;
+}
+
+.content__index-link-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.content__index-link-button {
+	flex: 1 1 10%;
+	color: #606060;
+	font-size: 18px;
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.content__index-products-links-container {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.content__index-featured-review-container {
+	grid-area: 1 / 3 / 2 / 4;
+}
+
+.content__index-awards-container {
+	grid-area: 1 / 4 / 2 / 5;
+}
+
+/******  Index - Award Sprite  ******/
+
+.award-1, .award-10, .award-11, .award-12, .award-2, 
+.award-3, .award-4, .award-5, .award-6, .award-7, 
+.award-8, .award-9
+{ display: inline-block; background: url('../images/awards-sprite.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; margin: 10px 30px 30px 30px;}
+ 
+.award-1 { background-position: -0px -0px; width: 125px; height: 130px; }
+.award-10 { background-position: -125px -0px; width: 125px; height: 130px; }
+.award-11 { background-position: -250px -0px; width: 125px; height: 130px; }
+.award-12 { background-position: -0px -130px; width: 125px; height: 130px; }
+.award-2 { background-position: -125px -130px; width: 125px; height: 130px; }
+.award-3 { background-position: -250px -130px; width: 125px; height: 130px; }
+.award-4 { background-position: -0px -260px; width: 125px; height: 130px; }
+.award-5 { background-position: -125px -260px; width: 125px; height: 130px; }
+.award-6 { background-position: -250px -260px; width: 125px; height: 130px; }
+.award-7 { background-position: -0px -390px; width: 125px; height: 130px; }
+.award-8 { background-position: -125px -390px; width: 125px; height: 130px; }
+.award-9 { background-position: -250px -390px; width: 125px; height: 130px; }
+
+.content__index-awards {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.content__index-awards h2 {
+	flex: 1 1 100%;
+	margin: 50px 0;
+	font-size: 30px;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+}
+
+  
+
+
+/***********  Slider - Carousel  ***********/
+
+.slider {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	grid-area: 1 / 1 / 2 / 4;
+}
+
+
+
+.slide {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	float: left;
+	position: absolute;
+}
+
+.in-slide-1 {
+	display: grid;
+	grid-template: 100% / 1fr 570px 570px 1fr;
+	align-content: center;
+	background: url('../images/main-bg-1.jpg') 50% 0 fixed no-repeat;
+	height: 100%;
+}
+
+.in-slide-1 img {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.slide-text-cont {
+	grid-area: 1 / 3 / 2 / 4;
+	width: 100%;
+	align-content: space-evenly;
+	display: flex;
+}
+
+.slide-text {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 463px;
+}
+
+.slide-text h2, .slide-text p {
+	flex: 1 1 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.in-slide-1 h2 {
+	color: #fff;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 36px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.in-slide-1 p {
+	font-family: 'Lato', sans-serif;
+	font-size: 24px;
+	color: #62CBAD;
+}
+
+.in-slide-1 ul {
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+.in-slide-2 {
+	display: grid;
+	grid-template: 100% / 1fr 570px 570px 1fr;
+	align-content: center;
+	background: url('../images/main-bg-2.jpg') 50% 0 fixed no-repeat;
+	height: 463px;
+}
+
+.in-slide-2 img {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.in-slide-2 h2 {
+	color: #363636;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 36px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.in-slide-2 p {
+	font-family: 'Lato', sans-serif;
+	font-size: 24px;
+	color: #62CBAD;
+}
+
+.in-slide-2 ul {
+	color: #363636;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+.in-slide-3 {
+	display: grid;
+	grid-template: 100% / 1fr 570px 570px 1fr;
+	align-content: center;
+	background: url('../images/main-bg-4.jpg') 50% 0 fixed no-repeat;
+	height: 463px;
+}
+
+.in-slide-3 img {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.in-slide-3 h2 {
+	color: #ffffff;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 36px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.in-slide-3 p {
+	font-family: 'Lato', sans-serif;
+	font-size: 24px;
+	color: #B11924;
+}
+
+.in-slide-3 ul {
+	color: #ffffff;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+.in-slide-4 {
+	display: grid;
+	grid-template: 100% / 1fr 570px 570px 1fr;
+	align-content: center;
+	background: url('../images/main-bg-3.jpg') 50% 0 fixed no-repeat;
+	height: 463px;
+}
+
+.in-slide-4 img {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.in-slide-4 h2 {
+	color: #ffffff;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 36px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.in-slide-4 p {
+	font-family: 'Lato', sans-serif;
+	font-size: 24px;
+	color: #62CBAD;
+}
+
+.in-slide-4 ul {
+	color: #ffffff;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+#slideposition {
+	display: none;
+}
+
+/***********  Gearshop content  ***********/
+
+.content-container__gearshop {
+	grid-area: 2 / 1 / 3 / 2;
+	display: grid;
+	grid-template: auto / 1fr 1140px 1fr;
+	background-color: #101010;
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+}
+
+.content__gearshop {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.content__gearshop__headline {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.content__gearshop__main {
+	background-color: #1F1F1F;
+	padding-bottom: 60px;
+	justify-content: center;
+	padding-top: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content__gearshop a {
+	color: #B11924;
+}
+
+.content__gearshop__main h1 {
+	font-size: 24px;
+	text-align: center;
+	margin: 30px 0;
+	grid-area: 1 / 1 / 2 / 2;
+	width: 100%;
+	flex: 1 1 100%;
+}
+
+.content__gearshop__main h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 10px 0 0 5px;
+}
+
+.content__gearshop__main p {
+	font-size: 14px;
+	margin: 0 5px 12px 5px;
+}
+
+.content__gearshop__main ul {
+	font-size: 14px;
+}
+
+.content__gearshop__headline-flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.content__gearshop__headline-flex a {
+	margin: 12px 0;
+	font-size: 24px;
+	color: #98968E;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.content__gearshop-products-container {
+	width: 100%;
+	display: flex;
+	flex: 1 1 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.content__gearshop-product-type {
+	display: flex;
+	flex: 1 1 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 25px;
+}
+
+.product-type {
+	flex: 0 0 95%;
+	height: 36px;
+	border: solid 3px #98968E;
+	border-radius: 15px;
+	text-align: right;
+	font-family: 'Orbitron', sans-serif;
+	color: #fff;
+	line-height: 36px;
+	font-weight: bold;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.left-align {
+	text-align: start;
+}
+
+.content__gearshop-product-descr {
+	flex: 0 0 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.content__gearshop-product-item {
+	flex: 0 1 calc(25% - 10px);
+	padding: 0 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.content__gearshop-product-item p {
+	color: #999999;
+	font-size: 18px;
+	line-height: 27px;
+	margin-top: 15px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.content__gearshop-product-item .desktops-price {
+	font-size: 36px;
+	color: #fff;
+    font-weight: bold;
+}
+
+.content__gearshop-product-item p:hover {
+	color: #B11924;
+}
+
+.content__gearshop-product-price .desktops-price:hover {
+	color: #fff;
+}
+
+.content__gearshop-product-image {
+	border: 1px solid #363636;
+}
+
+.content__gearshop-product-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.content__gearshop-product-image:hover {
+	background-color: #000000;
+}
+
+.content__gearshop-product-price {
+	flex: 0 0 15%;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+
+.content__gearshop-product-price p {
+	font-size: 36px;
+}
+
+.content__gearshop-product-price input {
+    color: #111111;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #FD3630;
+    border: none;
+    cursor: pointer;
+}
+
+.content__gearshop-product-price input:focus {
+	outline: none;
+    background-color: #fff;
+}
+
+.content__gearshop-product-type p {
+	margin: 0;
+}
+
+
+
+
+
+/******  Anchor  ******/
+
+.anchor {
+	position: absolute;
+	top: 0;
+}
+
+/*********** Used in Scripts ***********/
+
+.bg-grey {
+	background-color: #363636;
+}
+
+.red-font {
+	color: red;
+}
+
+/***********  Animations  ***********/
+
+@keyframes sub-menu-laptop {
+	0%, 100% {
+		opacity: 0;
+	}
+	66.666% {
+		opacity: 0;
+	}
+	66.667% {
+		opacity: 1;
+	}
+	99.999% {
+		opacity: 1;
+	}
+}
+
+@keyframes sub-menu-desktop {
+	0%, 100% {
+		opacity: 0;
+	}
+	33.333% {
+		opacity: 0;
+	}
+	33.334% {
+		opacity: 1;
+	}
+	66.666% {
+		opacity: 1;
+	}
+	66.667% {
+		opacity: 0;
+	}
+}
+
+@keyframes sub-menu-origin {
+	0%, 100% {
+		opacity: 0;
+	}
+	0.001% {
+		opacity: 1;
+	}
+	33.333% {
+		opacity: 1;
+	}
+	33.334% {
+		opacity: 0;
+	}
+}
+
+
+/*  Links style  */
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
