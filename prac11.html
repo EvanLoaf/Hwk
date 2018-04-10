@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Drag</title>
+   <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+
+       .box1 {
+           position: absolute;
+           left: 10%;
+           top: 10%;
+           width: 300px;
+           height: 200px;
+           border: #AAAAAA solid 2px;
+       }
+
+       .box2 {
+            position: absolute;
+            left: 60%;
+            top: 40%;
+            width: 300px;
+            height: 200px;
+            border: crimson solid 2px;
+        }
+   </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+    <div class="box2">
+
+    </div>
+    <img src="http://fe.it-academy.by/Examples/ball3.png">
+    <script>
+        var dragElem;
+        var image;
+        var parent;
+
+        function dragStart(e) {
+            if (e.target.nodeName == "IMG") {
+                dragElem = e.target;
+                parent = e.target.parentNode;
+                console.log(parent);
+            } else {
+                dragElem = null;
+            }
+        }
+
+        function drag(e) {
+            e.preventDefault();
+            //image = e.target;
+            e.target.parentNode.removeChild(e.target);
+            console.log(dragElem);
+            e.stopImmediatePropagation();
+        }
+
+        function dragDrop(e) {
+            e.preventDefault();
+            if (!dragElem) return;
+            console.log(parent);
+            console.log(dragElem);
+            console.log(e.currentTarget.nodeName);
+            console.log(e.currentTarget.nodeName == "DIV");
+            e.currentTarget.appendChild(dragElem);
+            dragElem = null;
+            parent = null;
+            e.stopPropagation();
+        }
+
+        function dragDropBody(e) {
+            e.preventDefault();
+            console.log(e.currentTarget.nodeName);
+            if (e.currentTarget.nodeName != 'DIV') {
+                console.log('not going there');
+                parent.appendChild(dragElem);
+                parent.style.backgroundColor = 'blue';
+                e.stopImmediatePropagation();
+            }
+        }
+
+        function dragOver(e) {
+            e.preventDefault();
+        }
+
+        function dragEnter(e) {
+            e.preventDefault();
+            //defBg = e.currentTarget.style.backgroundColor;
+            //defBorder = e.currentTarget.style.border; 
+            //e.currentTarget.style.cssText = 'background-color: hotpink; border: orange dotted 30px;';
+            e.currentTarget.style.backgroundColor = 'red';
+        }
+
+        function dragLeave(e) {
+            e.preventDefault();
+            //e.currentTarget.style.backgroundColor = defBg;
+            //e.currentTarget.style.border = defBorder;
+            //defBg = null;
+            //defBorder = null;
+            e.currentTarget.style.backgroundColor = '';
+        }
+
+        const body = document.body;
+        var div = document.querySelectorAll('div');
+
+        for (let i = 0; i < div.length; i++) {
+            div[i].addEventListener('dragenter', dragEnter);
+        }
+        for (let i = 0; i < div.length; i++) {
+            div[i].addEventListener('dragover', dragOver);
+        }
+        for (let i = 0; i < div.length; i++) {
+            div[i].addEventListener('dragleave', dragLeave);
+        }
+        for (let i = 0; i < div.length; i++) {
+            div[i].addEventListener('drop', dragDrop, true);
+        }
+        for (let i = 0; i < div.length; i++) {
+            div[i].addEventListener('drag', drag);
+        }
+        var img = document.querySelector('img');
+        img.addEventListener('dragstart', dragStart);
+        body.addEventListener('drop', dragDropBody, false);
+        body.addEventListener('drag', drag);
+        body.addEventListener('dragover', dragOver);
+
+        // А вот так почему-то восстанавливает элемент
+
+        //body.addEventListener('drop', dragDropBody, true);
+        //body.addEventListener('drag', drag, true);
+        
+
+        
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
